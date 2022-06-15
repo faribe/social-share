@@ -40,7 +40,7 @@ And optionally add the facade in config/app.php
 ```php
 // config/app.php
 'aliases' => [
-    'Share' => Faribe\SocialShare\SocialShareFacade::class,
+    'SocialShare' => Faribe\SocialShare\SocialShareFacade::class,
 ];
 ```
 
@@ -77,43 +77,43 @@ Load jquery.min.js & share.js by adding the following lines to your template fil
 #### Facebook
 
 ``` php
-Share::page('http://faribe.be')->facebook();
+SocialShare::page('http://faribe.be')->facebook();
 ```
 
 #### Twitter
 
 ``` php
-Share::page('http://faribe.be', 'Your share text can be placed here')->twitter();
+SocialShare::page('http://faribe.be', 'Your share text can be placed here')->twitter();
 ```
 
 #### Reddit
 
 ``` php
-Share::page('http://faribe.be', 'Your share text can be placed here')->reddit();
+SocialShare::page('http://faribe.be', 'Your share text can be placed here')->reddit();
 ```
 
 #### Linkedin
 
 ``` php
-Share::page('http://faribe.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
+SocialShare::page('http://faribe.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
 ```
 
 #### Whatsapp
 
 ``` php
-Share::page('http://faribe.be')->whatsapp()
+SocialShare::page('http://faribe.be')->whatsapp()
 ```
 
 #### Telegram
 
 ``` php
-Share::page('http://faribe.be', 'Your share text can be placed here')->telegram();
+SocialShare::page('http://faribe.be', 'Your share text can be placed here')->telegram();
 ```
 
 #### Viber
 
 ``` php
-Share::page('http://faribe.be', 'Your share text can be placed here')->viber();
+SocialShare::page('http://faribe.be', 'Your share text can be placed here')->viber();
 ```
 
 ### Sharing the current url
@@ -121,7 +121,7 @@ Share::page('http://faribe.be', 'Your share text can be placed here')->viber();
 Instead of manually passing an url, you can opt to use the `currentPage` function.
 
 ```php
-Share::currentPage()->facebook();
+SocialShare::currentPage()->facebook();
 ```
 
 ### Creating multiple share Links
@@ -129,7 +129,7 @@ Share::currentPage()->facebook();
 If want multiple share links for (multiple) providers you can just chain the methods like this.
 
 ```php
-Share::page('http://faribe.be', 'Share title')
+SocialShare::page('http://faribe.be', 'Share title')
 	->facebook()
 	->twitter()
 	->linkedin('Extra linkedin summary can be passed here')
@@ -157,7 +157,7 @@ In some cases you may only need the raw links without any html, you can get thes
 
 **A single link**
 ```php
-Share::page('http://faribe.be', 'Share title')
+SocialShare::page('http://faribe.be', 'Share title')
 	->facebook()
 	->getRawLinks();
 ```
@@ -171,7 +171,7 @@ https://www.facebook.com/sharer/sharer.php?u=http://faribe.be
 **Multiple links**
 
 ```php
-Share::page('http://faribe.be', 'Share title')
+SocialShare::page('http://faribe.be', 'Share title')
 	->facebook()
 	->twitter()
 	->linkedin('Extra linkedin summary can be passed here')
@@ -197,7 +197,7 @@ Outputs:
 You can simply add extra class(es), id('s), title(s) or relationship(s) by passing an array as the third parameter on the page method.
 
 ```php
-Share::page('http://faribe.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
+SocialShare::page('http://faribe.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
     ->facebook();
 ```
 
@@ -226,7 +226,7 @@ By default social links will be wrapped in the following html
 This can be customised by passing the prefix & suffix as a parameter.
 
 ```php
-Share::page('http://faribe.be', null, [], '<ul>', '</ul>')
+SocialShare::page('http://faribe.be', null, [], '<ul>', '</ul>')
             ->facebook();
 ```
 

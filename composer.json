@@ -1,0 +1,49 @@
+{
+    "name": "faribe/social-share",
+    "description": "Optional package for Laravel to generate social share links.",
+    "keywords": [
+        "laravel",
+        "share",
+        "social links",
+        "social share links"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Faribe\\SocialShare\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Faribe",
+            "email": "abdulla.fareez@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Faribe\\SocialShare\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Faribe\\SocialShare\\SocialShareServiceProvider"
+            ],
+            "aliases": {
+                "SocialShare": "Faribe\\SocialShare\\SocialShare"
+            }
+        }
+    }
+}

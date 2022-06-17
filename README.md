@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/faribe/social-share.svg?style=flat-square)](https://packagist.org/packages/faribe/social-share)
 [![Total Downloads](https://img.shields.io/packagist/dt/faribe/social-share.svg?style=flat-square)](https://packagist.org/packages/faribe/social-share)
-![GitHub Actions](https://github.com/faribe/social-share/actions/workflows/main.yml/badge.svg)
+[![GitHub Actions](https://github.com/faribe/social-share/actions/workflows/main.yml/badge.svg)
 
 Share links exist on almost every page in every project, creating the code for these share links over and over again can be a difficult at times.
 With Laravel Share you can generate these links in just seconds in a way tailored for Laravel.
@@ -47,7 +47,7 @@ And optionally add the facade in config/app.php
 Publish the package config & resource files.
 
 ```bash
-php artisan vendor:publish --provider="Faribe\SocialShare\SocialShareServiceProvider"
+php artisan vendor:publish --provider="Faribe\SocialShare\SocialShare\SocialShareServiceProvider"
 ```
 
 > You might need to republish the config file when updating to a newer version of Laravel Share

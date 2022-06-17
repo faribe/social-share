@@ -14,11 +14,11 @@ class SocialShareServiceProvider extends ServiceProvider
     {
 
         $this->publishes([
-            __DIR__ . '/../../config/social-share.php' => config_path('social-share.php'),
+            __DIR__ . '/../config/social-share.php' => config_path('social-share.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../../public/js/social-share.js' => public_path('js/social-share.js'),
+            __DIR__ . '/../public/js/social-share.js' => public_path('js/social-share.js'),
         ], 'assets');
     }
 

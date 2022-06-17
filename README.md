@@ -47,7 +47,7 @@ And optionally add the facade in config/app.php
 Publish the package config & resource files.
 
 ```bash
-php artisan vendor:publish --provider="Faribe\SocialShare\SocialShare\SocialShareServiceProvider"
+php artisan vendor:publish --provider="Faribe\SocialShare\SocialShareServiceProvider"
 ```
 
 > You might need to republish the config file when updating to a newer version of Laravel Share

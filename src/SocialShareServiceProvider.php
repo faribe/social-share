@@ -20,6 +20,7 @@ class SocialShareServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../public/js/social-share.js' => public_path('js/social-share.js'),
         ], 'assets');
+        
     }
 
     /**
